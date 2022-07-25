@@ -1,0 +1,285 @@
+/* GOOGLE FONTS  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+/*==================
+      VARIABLE  
+ ===================*/
+:root{
+    --primary-color: #353535;
+    --secondary-color: #ffca36;
+    --ternary-color: #555555;
+    ---white-color: #fff;
+}
+
+
+/*===============
+       RESET  
+ =================*/
+*,
+ *::before , 
+ *::after{
+  
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+} 
+
+html{
+
+    font-size: 62.5%;
+}
+body{
+
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+
+
+    
+}
+a{  
+    display: inline-block;
+    text-decoration: none;
+    font: inherit;
+}
+
+ul,
+ol{
+    list-style: none;
+}
+
+button,
+span{
+    display: inline-block;
+    font: inherit;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h1,
+p
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* CUSTOM CSS  */
+.before_after{
+    position: relative;
+}
+
+.before_after::before,
+.before_after::after{
+  content: '';
+  position: absolute;
+  width: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background: var(--secondary-color);
+  display: block;
+  transition: all .3s linear;
+}
+.before_after::before{
+    top: 0;
+}
+.before_after::after{
+    bottom: 0;
+}
+
+
+
+
+
+  .btn::before,
+  .btn::after{
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--secondary-color);
+  display: block;
+  transition: all .3s linear;
+  }
+
+  .btn::before{
+    left: 0;
+  }
+  .btn::after{
+    right: 0;
+  }
+ 
+ 
+
+/* ======================
+        !HEADER  
+=======================*/
+
+.header_wrapper .top_header_content{
+  min-height: 50px;
+  height: 100%;
+  background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.top_header_content .address{
+    padding: 1.5rem  0;
+
+}
+.top_header_content .address p{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-right: 2rem;
+}
+
+
+.top_header_content .welcome{
+    padding: 1.5rem 0;
+    background-color: var(--primary-color);
+    -webkit-clip-path: polygon(7% 0, 100% 0%, 95% 100%, 0% 100%);
+            clip-path: polygon(7% 0, 100% 0%, 95% 100%, 0% 100%);
+
+}
+.top_header_content .welcome p{
+    color: var(---white-color);
+    font-size: 1.4rem;
+}
+
+.top_header_content .social_links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+.top_header_content .social_links .before_after::before,
+.top_header_content .social_links .before_after::after{
+    background-color: var(--primary-color);
+    width: 0;
+}
+.top_header_content .social_links .before_after:hover::before,
+.top_header_content .social_links .before_after:hover::after{
+    background-color: var(--primary-color);
+    width: 120%;
+}
+.top_header_content .social_links  .btn::before,
+.top_header_content .social_links .btn::after{
+    background-color: var(--primary-color);
+    height: 0;
+}
+.top_header_content .social_links  .btn:hover::before,
+.top_header_content .social_links .btn:hover::after{
+    background-color: var(--primary-color);
+    height: 120%;
+}
+ 
+.top_header_content .social_links .social_link{
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1;
+    border: none;
+    padding: .7rem 1rem;
+}
+.top_header_content .social_links .social_link i{
+    color: var(--primary-color);
+}
+
+
+/* ======================
+        NAVIGATION   
+=======================*/
+.navigation_wrapper .nav_logo{
+    padding:  2.5rem 0;
+    line-height: 1;
+}
+.navigation_wrapper   .nav_items {
+    gap: 2rem;
+    align-items: center;
+}
+.navigation_wrapper   .nav_items  .nav-item{
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: relative;
+}
+
+.navigation_wrapper   .nav_items .nav-link{
+    position: relative;
+    padding: 1.5rem 1.5rem;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    display: inline-block;
+    transition: all .3s linear;
+    border: none;
+}
+
+.navigation_wrapper   .nav_items .before_after::before,
+.navigation_wrapper   .nav_items .before_after::after{
+    width: 0;
+}
+.navigation_wrapper   .nav_items .before_after:hover::before,
+.navigation_wrapper   .nav_items .before_after:hover::after{
+    width: 120%;
+}
+
+.navigation_wrapper   .nav_items .btn::before,
+.navigation_wrapper   .nav_items  .btn::after{
+    height: 0;
+} 
+
+.navigation_wrapper   .nav_items .btn:hover::before,
+.navigation_wrapper   .nav_items  .btn:hover::after{
+    height: 120%;
+}
+.navigation_wrapper   .nav_items .nav-link.active,
+.navigation_wrapper   .nav_items .nav-link:hover{
+    color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================
+        HEADER  
+=======================*/
+/* ======================
+        HEADER  
+=======================*/
+/* ======================
+        HEADER  
+=======================*/
+/* ======================
+        HEADER  
+=======================*/
+/* ======================
+        HEADER  
+=======================*/
+/* ======================
+        HEADER  
+=======================*/
+/* ======================
+        HEADER  
+=======================*/
+/* ======================
+        HEADER  
+=======================*/
